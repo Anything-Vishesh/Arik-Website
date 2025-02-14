@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Charm:wght@400;700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kumar+One&family=Noto+Serif+Balinese&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Charm:wght@400;700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kumar+One&family=Noto+Serif+Balinese&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +27,7 @@ nav {
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
   top: 45px;
+  z-index: 10;
 }
 nav div {
   display: flex;
@@ -111,23 +113,141 @@ nav a {
   position: relative;
   font-size: 2rem;
 }
+.hero-2 .marque::before, .hero-2 .marque::after {
+  content: "";
+  height: 100%;
+  width: 30%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.hero-2 .marque::after {
+  right: 0;
+  background-image: linear-gradient(to left, #0e0e0e, transparent);
+}
+.hero-2 .marque::before {
+  left: 0;
+  background-image: linear-gradient(to right, #0e0e0e, transparent);
+}
 .hero-2 .marque .marque-1 {
+  margin-top: 10px;
   display: flex;
   gap: 3rem;
   animation: marquee 8s linear infinite both;
 }
-.hero-2 .before {
-  height: 65px;
-  width: 124px;
-  position: absolute;
-  background-image: linear-gradient(to right, #0e0e0e, transparent);
+
+.hero-3 .boxes {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px 10px;
 }
-.hero-2 .after {
-  height: 65px;
-  width: 124px;
+.hero-3 .boxes .box {
+  width: 95%;
+  height: 320px;
+  border: 1px solid #343230;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.hero-3 .boxes .box h3 {
+  font-size: 2rem;
+}
+.hero-3 .boxes .box div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: "POPPINS", serif;
+}
+.hero-3 .boxes .box div span {
+  border: 1px solid wheat;
+  border-radius: 50px;
+  transform: rotate(230deg);
+}
+.hero-3 .boxes .box div a {
+  text-decoration: none;
+  color: wheat;
+}
+.hero-3 .boxes .box div:hover span {
+  transform: rotate(268deg);
+  transition-duration: 0.2s;
+}
+
+.hero-4 {
+  width: 100%;
+}
+.hero-4 .first {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex-direction: column;
+  gap: 20px;
+}
+.hero-4 .first p {
+  font-size: 2.5rem;
+}
+.hero-4 .first div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-4 .first div span {
+  border: 1px solid wheat;
+  border-radius: 50px;
+  transform: rotate(230deg);
+}
+.hero-4 .first div a {
+  text-decoration: none;
+  color: wheat;
+}
+.hero-4 .first div:hover span {
+  transform: rotate(268deg);
+}
+.hero-4 .second {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "a" "b" "c" "d";
+  gap: 10px;
+}
+.hero-4 .second .images {
+  width: 95%;
+  margin: auto;
+  position: relative;
+}
+.hero-4 .second .images .a {
+  grid-area: a;
+}
+.hero-4 .second .images .b {
+  grid-area: b;
+}
+.hero-4 .second .images .c {
+  grid-area: c;
+}
+.hero-4 .second .images .d {
+  grid-area: d;
+}
+.hero-4 .second .images img {
+  width: 100%;
+}
+.hero-4 .second .images div {
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border: 1px solid #343230;
   position: absolute;
-  background-image: linear-gradient(to left, #0e0e0e, transparent);
-  right: 0;
+  bottom: 10px;
+  left: 7px;
+  font-size: 1.2rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 @keyframes marquee {
@@ -184,6 +304,24 @@ nav a {
     display: block;
   }
   .hero-2 .marque {
-    width: 50%;
+    width: 80%;
+  }
+  .hero-3 .boxes {
+    flex-direction: row;
+  }
+  .hero-3 .boxes .box {
+    width: 400px;
+  }
+  .hero-4 .first {
+    flex-direction: row;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .hero-4 .second {
+    grid-template-areas: "a b" "c d";
+    gap: 10px;
+  }
+  .hero-4 .second .images div {
+    left: 13px;
   }
 }/*# sourceMappingURL=style.css.map */
