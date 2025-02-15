@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Charm:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kumar+One&family=Noto+Serif+Balinese&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Charm:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Kumar+One&family=Noto+Serif+Balinese&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -329,22 +329,34 @@ nav a {
 .hero-6 .eleven {
   grid-area: k;
 }
-.hero-6 .two, .hero-6 .three, .hero-6 .four, .hero-6 .five, .hero-6 .six {
+.hero-6 .two,
+.hero-6 .three,
+.hero-6 .four,
+.hero-6 .five,
+.hero-6 .six {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
 }
-.hero-6 .two span, .hero-6 .three span, .hero-6 .four span, .hero-6 .five span, .hero-6 .six span {
+.hero-6 .two span,
+.hero-6 .three span,
+.hero-6 .four span,
+.hero-6 .five span,
+.hero-6 .six span {
   font-size: 1.5rem;
   border: 1px solid #343230;
   border-radius: 50px;
   padding: 10px;
 }
-.hero-6 .two div, .hero-6 .three div, .hero-6 .four div, .hero-6 .five div, .hero-6 .six div {
+.hero-6 .two div,
+.hero-6 .three div,
+.hero-6 .four div,
+.hero-6 .five div,
+.hero-6 .six div {
   width: 1px;
-  height: 50%;
+  height: 100%;
   border: 1px solid #f8f8f8;
 }
 .hero-6 .seven {
@@ -356,7 +368,6 @@ nav a {
   width: 95%;
   margin: auto;
   flex-direction: column;
-  padding: 15px;
   font-style: normal;
 }
 .hero-6 .seven span {
@@ -378,8 +389,70 @@ nav a {
 .hero-6 .seven div h2 {
   text-transform: uppercase;
 }
+.hero-6 .seven div p,
+.hero-6 .seven div ul {
+  font-size: 0.9rem;
+}
 .hero-6 .seven div ul {
   padding: 10px;
+}
+
+.hero-7 .one {
+  margin: 50px 0;
+  padding: 10px;
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.hero-7 .one h1 {
+  font-size: 2.5rem;
+  font-weight: 100;
+}
+.hero-7 .one p {
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+.hero-7 .two {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "a" "b" "c" "d" "e" "f";
+  place-items: center;
+}
+.hero-7 .two .parant {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid #343230;
+  padding: 30px;
+}
+.hero-7 .two .parant .child {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.hero-7 .two .parant .child img {
+  border-radius: 50px;
+}
+.hero-7 .two .one {
+  grid-area: a;
+}
+.hero-7 .two .two {
+  grid-area: b;
+}
+.hero-7 .two .three {
+  grid-area: c;
+}
+.hero-7 .two .four {
+  grid-area: d;
+}
+.hero-7 .two .five {
+  grid-area: e;
+}
+.hero-7 .two .six {
+  grid-area: f;
 }
 
 @keyframes marquee {
@@ -462,12 +535,13 @@ nav a {
     gap: 0;
   }
   .hero-6 .seven {
-    width: 70%;
-    margin: 0;
+    width: 80%;
+    margin: atuo;
     align-items: end;
   }
-  .hero-6 .eight, .hero-6 .ten {
-    margin-right: 0;
-    margin-left: auto;
+  .hero-7 .two {
+    width: 70%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "a b" "c d" "e f";
   }
 }/*# sourceMappingURL=style.css.map */
